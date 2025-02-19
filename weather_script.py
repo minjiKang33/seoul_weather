@@ -28,4 +28,4 @@ with open(csv_filename, "a", newline="") as file:
     # 파일이 존재하지 않는다 -> 헤더가 없다!!
     if not file_exist:
         writer.writerow(header)
-    writer.writerow([timezone, temp, humidity, description])
+    writer.writerow([timezone, temp, humidity, description]) 
