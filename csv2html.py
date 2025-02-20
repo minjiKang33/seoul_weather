@@ -12,7 +12,7 @@ def print_csv():
     df = pd.read_csv()
     dataframe = df.to_html()
 
-    return render_template("seoul.html", dataframe=dataframe)
+    return render_template("csv2html.html", dataframe=dataframe)
 
 
 if __name__ == "__main__":
