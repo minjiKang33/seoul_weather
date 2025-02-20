@@ -9,7 +9,7 @@ def print_csv():
 
     import pandas as pd
 
-    df = pd.read_csv()
+    df = pd.read_csv("seoul_weather.csv")
     dataframe = df.to_html()
 
     return render_template("csv2html.html", dataframe=dataframe)
