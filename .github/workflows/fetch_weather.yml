@@ -35,6 +35,12 @@ jobs: # 실행할 작업을 정의
         run: |
           export FLASK_APP=csv2html.py
           flask run --host=0.0.0.0 --port=5000 &
+
+      - name: Wait for Flask to Start
+        run: sleep 5
+
+      - name: Check if Flask is Running
+        run: curl http://127.0.0.1:5000 || exit 1
         
 
       - name: 변경 사항 커밋 및 푸시
