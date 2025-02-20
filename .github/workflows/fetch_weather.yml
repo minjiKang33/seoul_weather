@@ -24,12 +24,10 @@ jobs: # 실행할 작업을 정의
           python-version: "3.9"
 
       - name: 필요한 패키지 설치
-        run: pip install requests # API 요청 위한 라이브러리 설치
-
-      - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install requests # API 요청 위한 라이브러리 설치
+          pip install flask
+          pip install pytest
 
       - name: 날씨 데이터 가져오기
         env: # GITHUB secrets에서 환경 변수 가져오기
